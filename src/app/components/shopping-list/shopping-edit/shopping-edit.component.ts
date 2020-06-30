@@ -28,7 +28,8 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   onClearInput() {
-
+    this.nameInput.nativeElement.value = '';
+    this.amountInput.nativeElement.value = '';
   }
 
 }
