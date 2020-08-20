@@ -123,8 +123,13 @@
               "devServerTarget": "Demo-Recipes:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Demo-Recipes"
 }
