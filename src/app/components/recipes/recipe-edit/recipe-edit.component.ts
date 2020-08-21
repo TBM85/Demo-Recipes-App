@@ -3,8 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-edit',
-  templateUrl: './recipe-edit.component.html',
-  styleUrls: ['./recipe-edit.component.scss']
+  templateUrl: './recipe-edit.component.html'
 })
 export class RecipeEditComponent implements OnInit {
   id: number;

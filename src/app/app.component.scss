@@ -1,0 +1,40 @@
+/* GENERAL */
+.dropdown-menu li {
+  cursor: pointer;
+}
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.6em;
+}
+button.btn.btn-secondary {
+  margin: 0 0.25em;
+  width: auto;
+  min-width: 5em;
+  background: #222222;
+  color: #bfbfbf;
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-group, .btn-group-vertical {
+  float: right;
+}
+.list-group {
+  display: flex;
+}
+.list-group-item {
+  cursor: pointer;
+  margin: 0 0.25em;
+  img {
+    max-height: 50px;
+  }
+}
+/* RECIPES */
+.recipe-details {
+  margin-bottom: 2em;
+}
+
+
+
+
