@@ -22,10 +22,11 @@ button.btn.btn-secondary {
 }
 .list-group {
   display: flex;
+  flex-wrap: wrap;
 }
 .list-group-item {
   cursor: pointer;
-  margin: 0 0.25em;
+  margin: 0.25em;
   img {
     max-height: 50px;
   }
@@ -34,7 +35,5 @@ button.btn.btn-secondary {
 .recipe-details {
   margin-bottom: 2em;
 }
-
-
 
 
