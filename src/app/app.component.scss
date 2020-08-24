@@ -85,6 +85,11 @@ button.btn.btn-secondary {
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
 
 /* RECIPES */
 .recipe-details {
