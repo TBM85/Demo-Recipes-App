@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-12 button-group">
           <button type="submit" class="btn btn-secondary" [disabled]="!recipeForm.valid">Save</button>
-          <button type="button" class="btn btn-secondary">Cancel</button>
+          <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
         </div>
       </div>
       <hr />
