@@ -1,11 +1,62 @@
-/* GENERAL */
+$screen-xs-max: 575px;
+$screen-sm-min: 576px;
+$screen-sm-max: 767px;
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+$screen-xl-min: 1200px;
+
+// Extra small //
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+      @content;
+  }
+}
+// Small devices //
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+      @content;
+  }
+}
+// Medium devices //
+@mixin md {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+      @content;
+  }
+}
+// Large devices //
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+      @content;
+  }
+}
+// Extra large devices //
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+/************* VARIABLES *******************/
+@mixin space-above-xs-sm {
+  @include xs {
+    margin-top: 1.6em;
+  }    
+  @include sm {
+    margin-top: 1.6em;
+  }  
+}
+
+
+/************* GENERAL *******************/
 .dropdown-menu li {
   cursor: pointer;
 }
 .button-group {
   display: flex;
   justify-content: flex-end;
-  margin-top: 1.6em;
+  @include space-above-xs-sm;
 }
 button.btn.btn-secondary {
   margin: 0 0.25em;
@@ -19,6 +70,7 @@ button.btn.btn-secondary {
 }
 .btn-group, .btn-group-vertical {
   float: right;
+  @include space-above-xs-sm; 
 }
 .list-group {
   display: flex;
@@ -27,13 +79,14 @@ button.btn.btn-secondary {
 .list-group-item {
   cursor: pointer;
   margin: 0.25em;
-  img {
-    max-height: 50px;
-  }
 }
+.list-group-item:last-child {
+  margin-bottom: 3px !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
 /* RECIPES */
 .recipe-details {
   margin-bottom: 2em;
 }
-
-
