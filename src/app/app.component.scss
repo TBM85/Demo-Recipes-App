@@ -48,7 +48,6 @@ $screen-xl-min: 1200px;
   }  
 }
 
-
 /************* GENERAL *******************/
 .dropdown-menu li {
   cursor: pointer;
@@ -59,11 +58,11 @@ $screen-xl-min: 1200px;
   @include space-above-xs-sm;
 }
 button.btn.btn-secondary {
-  margin: 0 0.25em;
+  margin: 1.6em 0.25em 0;
   width: auto;
   min-width: 5em;
-  background: #222222;
-  color: #bfbfbf;
+  background: #2e2322;
+  color: #ddd;
   &:hover {
     color: #fff;
   }
@@ -90,7 +89,6 @@ textarea.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
-
 /* RECIPES */
 .recipe-details {
   margin-bottom: 2em;
@@ -103,4 +101,24 @@ textarea.ng-invalid.ng-touched {
   width: 100%;
   height: auto;
   padding: 0.25em;
+}
+
+/* RECIPE LIST */
+.list-group-item.active {
+  color: #2e2322 !important;
+  background-color: #fff4e5 !important;
+  border-color: #fee7c4 !important;
+}
+.list-group-item.active .list-group-item-text, 
+.list-group-item.active:focus .list-group-item-text, 
+.list-group-item.active:hover .list-group-item-text {
+  color: #2e2322;;
+}
+a.list-group-item:hover {
+  background-color: #fffcf7;
+}
+
+/*  RECIPE EDIT */
+.ingredients-to-recipe button {
+  margin: 0 0.25em !important;
 }
