@@ -39,7 +39,7 @@ $screen-xl-min: 1200px;
 }
 
 /************* VARIABLES *******************/
-@mixin space-above-xs-sm {
+@mixin max-space-above-xs-sm {
   @include xs {
     margin-top: 1.6em;
   }    
@@ -55,7 +55,7 @@ $screen-xl-min: 1200px;
 .button-group {
   display: flex;
   justify-content: flex-end;
-  @include space-above-xs-sm;
+  @include max-space-above-xs-sm;
 }
 button.btn.btn-secondary {
   margin: 1.6em 0.25em 0;
@@ -69,7 +69,7 @@ button.btn.btn-secondary {
 }
 .btn-group, .btn-group-vertical {
   float: right;
-  @include space-above-xs-sm; 
+  @include max-space-above-xs-sm; 
 }
 .list-group {
   display: flex;
@@ -118,7 +118,18 @@ a.list-group-item:hover {
   background-color: #fffcf7;
 }
 
-/*  RECIPE EDIT */
+/*  RECIPE INGREDIENTS */
 .ingredients-to-recipe button {
   margin: 0 0.25em !important;
+  height: 2.4em;
+}
+.alert {
+  padding: 5px !important;
+  width: fit-content;
+  text-align: center;
+  margin: auto 0.25em;
+}
+.ingredients-to-shopping-list {
+  display: flex !important;
+  flex-wrap: wrap;
 }

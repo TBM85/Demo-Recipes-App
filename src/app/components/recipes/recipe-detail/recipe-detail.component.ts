@@ -10,6 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
   id: number;
+  ingredientsInShopList = false;
 
   constructor(
     private recipeService: RecipeService,
@@ -28,6 +29,10 @@ export class RecipeDetailComponent implements OnInit {
 
   onAddToShoppingList() {
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    this.ingredientsInShopList = true;
+    setTimeout(() => {
+      this.ingredientsInShopList = false;
+    }, 3500);
   }
 
   onEditRecipe() {
