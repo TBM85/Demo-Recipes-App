@@ -38,6 +38,24 @@ $screen-xl-min: 1200px;
   }
 }
 
+/************* PRINT *******************/
+app-print-shopping-list {
+  // Hide shopping list on the 'shopping list' page
+  display: none;
+}
+
+@media print {
+  // Show the shopping list in the printing page
+  app-print-shopping-list {
+    display: grid;
+    width: 100% !important;
+  }
+  // Hide de 'shopping-list' page in the printing page
+  .list-ingredients {
+    display: none;
+  }
+}
+
 /************* VARIABLES *******************/
 @mixin max-space-above-xs-sm {
   @include xs {
@@ -132,4 +150,24 @@ a.list-group-item:hover {
 .ingredients-to-shopping-list {
   display: flex !important;
   flex-wrap: wrap;
+}
+
+/* PRINT PAGE */
+.print-list-ingredients {
+  h2 {
+    margin-bottom: 1em;
+  }
+  label {
+    display: inline !important;
+    font-size: 1.4em;
+    font-weight: 400;
+  }
+  .col-md-12 {
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+  .form-check.col-md-4 {
+    padding: 0.5em;
+  }
 }

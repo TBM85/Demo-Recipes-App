@@ -1,1 +1,11 @@
-<p>print-shopping-list works!</p>
+<div class="container print-list-ingredients">
+  <h2 class="text-center">Shopping list</h2>
+  <div class="col-md-12">
+    <div class="form-check col-md-4" *ngFor="let ingredient of ingredients; let i = index">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        {{ingredient.amount}} {{ingredient.name}}
+      </label>
+    </div>
+  </div>
+</div>

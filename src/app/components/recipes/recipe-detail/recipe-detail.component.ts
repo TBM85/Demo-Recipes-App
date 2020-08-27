@@ -32,7 +32,7 @@ export class RecipeDetailComponent implements OnInit {
     this.ingredientsInShopList = true;
     setTimeout(() => {
       this.ingredientsInShopList = false;
-    }, 3500);
+    }, 2000);
   }
 
   onEditRecipe() {
