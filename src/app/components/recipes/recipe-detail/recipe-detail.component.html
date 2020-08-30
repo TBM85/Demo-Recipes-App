@@ -31,7 +31,7 @@
     <h4>Ingredients:</h4>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
-        {{ ingredient.name }} ({{ ingredient.amount}})
+        <span class="text-capitalize">{{ ingredient.name }}</span> | {{ ingredient.amount }} {{ ingredient.measure }}
       </li>
     </ul>
     <div class="ingredients-to-shopping-list">

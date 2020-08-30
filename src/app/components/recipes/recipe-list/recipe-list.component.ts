@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Recipe } from '../recipe.model';
+import { Recipe } from '../../../shared/models/recipe.model';
 import { RecipeService } from '../recipes.service';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';

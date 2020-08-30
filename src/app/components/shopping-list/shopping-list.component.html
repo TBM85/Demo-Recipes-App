@@ -9,7 +9,7 @@
         *ngFor="let ingredient of ingredients; let i = index"
         (click)="onEditItem(i)"
       >
-        {{ingredient.name}} ({{ingredient.amount}})
+        <span class="text-capitalize">{{ ingredient.name }}</span> | {{ ingredient.amount }} {{ ingredient.measure }}
       </a>
     </ul>
   </div>

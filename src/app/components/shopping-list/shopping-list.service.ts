@@ -1,16 +1,16 @@
 import { Subject } from 'rxjs';
-import { Ingredient } from 'src/app/shared/ingredient.model';
+import { Ingredient } from 'src/app/shared/models/ingredient.model';
 
 export class ShoppingListService {
   ingredientsChanged = new Subject<Ingredient[]>();
   startedEditing = new Subject<number>();
 
   private ingredients: Ingredient[] = [
-    new Ingredient( 'salt', 1),
-    new Ingredient( 'sugar', 1),
-    new Ingredient( 'pepper', 1),
-    new Ingredient( 'olive oil', 1),
-    new Ingredient( 'vinegar', 1)
+    new Ingredient( 'salt', 2, 'grams'),
+    new Ingredient( 'sugar', 1, 'pound'),
+    new Ingredient( 'pepper', 1, 'unit'),
+    new Ingredient( 'olive oil', 200, 'milliliter'),
+    new Ingredient( 'vinegar', 100, 'milliliter')
   ];
 
   getIngredients() {
